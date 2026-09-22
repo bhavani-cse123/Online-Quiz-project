@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="quiz-header">
+                <h1>web development quiz</h1>
+                <div id="timer">
+                    Time:<span id="time">60</span>
+                </div> 
+            </div>
+            <form id="quizform" action="/result" method="POST">
+                {% for question in questions %}
+                {% set q_index = loop.index0 %}
+                <div class="question-card">
+                    <h2>question {{loop.index}}</h2>
+                    <p>{{question.question}}</p>
+                    {% for option in question.options %}
+                    <label class="option">
+                        <input type="radio"
+                        name="questions{{q_index}}"
+                        value="{{option}}"
+                        >
+                        <span>{{option}}</span>
+
+                    </label>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                <button type="submit" class="submit_btn">
+                    submit quiz
+                </button>
+
+            </form>
+        </div>
+        
+            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        
+
+
+    </body>
+</html>
