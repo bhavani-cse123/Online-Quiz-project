@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Quiz result</title>
+        <link rel="stylesheet"  href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="container result">
+            <h1>Quiz result</h1>
+            <div class="result.card">
+            <p>score:
+                <strong>{{score}}</strong>/<strong>{{total}}</strong>
+            </p>
+            <p>Percentage:
+                <strong>{{percentage}}</strong>
+            </p>
+            {% if percentage >=80 %}
+            <h3>Excellent</h3>
+            {% elif percentage >=50 %}
+            <h3>Good Job</h3>
+            {% else %}
+            <h3> keep praticing</h3>
+            {% endif %}
+            </div>
+        <a href="/quiz">
+            <button class="start_btn">
+                Try Again
+            </button>
+        </a>
+        </div>
+    </body>
+</html>
