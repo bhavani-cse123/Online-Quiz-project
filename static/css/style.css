@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f2f5f9;
+    color: black;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgb(172, 152, 244);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Home */
+.home h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.instructions {
+    background:rgb(172, 152, 244);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.instructions h2 {
+    margin-bottom: 20px;
+}
+
+.instructions li {
+    list-style: none;
+    border-left: 4px solid black;
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+.start_btn,
+.submit_btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+
+/* Quiz */
+.quiz-header {
+    background: #4f46e5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+#timer {
+    margin-top: 10px;
+}
+
+.question-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.question-card h2 {
+    color: #4f46e5;
+    margin-bottom: 20px;
+}
+
+.question-card p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.option {
+    display: block;
+    background: #f8fafc;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+/* Result */
+.result {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.result h1 {
+    color: #4f46e5;
+}
+
+.result p {
+    font-size: 20px;
+    margin: 15px;
+}
